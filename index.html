@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday My Love 💖</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- LOCK SCREEN -->
+    <div id="lock" class="screen active">
+      <h2>🎁 Món quà dành riêng cho em</h2>
+      <p class="hint">Ngày em đến với thế giới 💕</p>
+      <input id="password" type="password" placeholder="DDMMYYYY" />
+      <button onclick="unlock()">Mở quà 💝</button>
+      <span id="error"></span>
+    </div>
+
+    <!-- MAIN APP -->
+    <div id="app" class="screen">
+      <audio id="music" src="assets/music/happy-birthday.mp3" loop></audio>
+
+      <!-- HERO -->
+      <section class="hero glass">
+        <h1 class="fade-line">💖 Happy Birthday</h1>
+        <h2 class="fade-line delay1">Cô gái của đời anh</h2>
+        <p class="fade-line delay2">
+          Hôm nay là ngày thế giới trở nên xinh đẹp hơn 🌷
+        </p>
+      </section>
+
+      <!-- TIMELINE -->
+      <section class="timeline">
+        <div class="moment glass">
+          <img src="assets/images/image-01.jpg" />
+          <p>🌸 Ngày mình gặp nhau</p>
+        </div>
+
+        <div class="moment glass">
+          <video src="assets/video/memory.mp4" muted playsinline></video>
+          <p>🎥 Kỷ niệm đáng nhớ</p>
+        </div>
+
+        <div class="moment glass">
+          <img src="assets/images/image-02.jpg" />
+          <p>✈️ Những chuyến đi cùng nhau</p>
+        </div>
+
+        <div class="moment glass">
+          <img src="assets/images/image-03.jpg" />
+          <p>🎂 Sinh nhật em bé yêu hôm nay</p>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="gallery glass">
+        <img src="assets/images/image-04.jpg" onclick="openImg(this)" />
+        <img src="assets/images/image-05.jpg" onclick="openImg(this)" />
+        <img src="assets/images/image-06.jpg" onclick="openImg(this)" />
+      </section>
+
+      <!-- CARD -->
+      <section class="card-area">
+        <div class="card" onclick="flipCard()">
+          <div class="front">💌</div>
+          <div class="back">
+            <h3>Gửi em yêu</h3>
+            <p>
+              Chúc em luôn hạnh phúc,<br />
+              luôn mỉm cười thật xinh 🌷<br />
+              Anh yêu em rất nhiều ❤️
+            </p>
+            <button onclick="surprise(event)">💖 Anh yêu em</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- END -->
+      <section class="end glass">
+        <p>💞 Cảm ơn em vì đã đến bên anh</p>
+        <button onclick="location.reload()">Xem lại từ đầu 🔁</button>
+      </section>
+    </div>
+
+    <!-- IMAGE VIEWER -->
+    <div id="viewer" onclick="closeViewer()">
+      <img id="viewerImg" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
